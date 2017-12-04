@@ -59,8 +59,10 @@ App.controller('AlbumController', function($scope) {
 	  
 	  //init()
 	  $scope.init = function(){
-		  if($scope.currentUser.userName == "First"){
-			  $scope.imageUrl =  '//placekitten.com/';
+		  if($scope.currentUser != null){
+			  if($scope.currentUser.userName == "First"){
+				  $scope.imageUrl =  '//placekitten.com/';
+			  }
 		  }
 		  for (var i = 0; i < 10; i++) {
 			    $scope.addSlide();

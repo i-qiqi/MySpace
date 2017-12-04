@@ -1,7 +1,7 @@
 //路由
 App.config([ '$stateProvider', '$urlRouterProvider',
 		function($stateProvider, $urlRouterProvider) {
-			$urlRouterProvider.otherwise('home.aboutMe')
+			$urlRouterProvider.otherwise('home')
 			$stateProvider.state('home', {
 				url : '/home',
 				templateUrl : 'home.html',
