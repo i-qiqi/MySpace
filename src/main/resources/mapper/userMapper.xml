@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace="space.dao.UserMapper" >
+  <resultMap id="UserResMap" type="space.entity.User" >
+    <id column="user_id" property="userName" jdbcType="INTEGER" />
+    <result column="first_name" property="firstName" jdbcType="VARCHAR" />
+    <result column="last_name" property="lastName" jdbcType="VARCHAR" />
+    <result column="password_" property="password" jdbcType="VARCHAR" />
+     <result column="email_" property="email" jdbcType="VARCHAR" />
+  </resultMap>
+  
+  <select id="findUser" resultMap="UserResMap" parameterType="java.lang.String" >
+    select * from tb_user where user_id = #{userId}
+  </select>
+  
+  <select id="findAll" resultMap="UserResMap">
+    select * from tb_user
+  </select>
+  
+  <delete id="deleteUser" parameterType="User" >
+    delete from t_user where user_id = #{userName}
+  </delete>
+  
+  <update id="updateUser" parameterType="User">
+  	update tb_user 
+  		set	tb_user.first_name = #{firstName},
+  			tb_user.last_name = #{lastName},
+  			tb_user.password_ = #{password},
+  			tb_user.email_ = #{email}
+  		where tb_user.user_id = #{userName}
+  </update>
+<!--   create table  tb_user(user_id varchar(20) primary key ,  first_name varchar(20) , last_name  varchar(20) , password_   varchar(20) not null TB_USER , email varchar(20)); 
+insert into tb_user values('Zero' , 'biqi' , 'zhu' , '000000' , 'bqzhu@gmail.com');
+insert into tb_user values('First' , 'san' , 'zhang' , '000000' , 'sanZhang@gmail.com');-->
+</mapper>

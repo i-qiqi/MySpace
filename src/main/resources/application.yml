@@ -1,0 +1,40 @@
+server:
+  port: 8080
+  context-path: /MySpace
+spring: 
+  datasource:
+    platform: h2
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:space
+    username: root
+    password: 1234
+    schema: classpath:schema.sql
+    data: classpath:data.sql
+#  jpa:
+#    properties:
+#      hibernate:
+#        dialect: org.hibernate.dialect.H2Dialect
+  h2:
+    console:
+      settings:
+        web-allow-others: true #使h2可以远程访问
+      path: /h2-console #通过YOUR_URL/h2-console访问h2 web console
+      enabled: true #程序开启时， 就启动h2 web console
+  thymeleaf:
+    cache: false
+#  devtools:
+#    restart:
+#      enabled: true
+logging:
+  level:
+    space:
+      dao: debug
+mybatis:
+  mapper-locations: mapper/*.xml
+  type-aliases-package: space.entity
+#热部署生效
+endpoints:
+  shutdown:
+    enabled: true
+    sensitive: false
+         

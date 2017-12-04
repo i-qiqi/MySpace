@@ -1,0 +1,84 @@
+@charset "UTF-8";
+
+/* .table th, .table td { */
+/* 	text-align: center; */
+/* } */
+.imgSlide{
+	width: 50%;
+	height: 400px;
+	padding-left:20%;
+	margin-left:10%;
+}
+.sideBar-menu {
+	margin: 10px auto;
+	width: 20%;
+	border: 1px solid #d3d7cf;
+	border-radius: 4px;
+}
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus{
+    color: #ffffff;
+    background-color: #555753;
+}
+.nav-pills>li>a{
+	color : #af1e1e;
+}
+.dropdown:hover .dropdown-menu {
+	display: block;
+}
+.rightView {
+	margin: 10px auto;
+	width: 75%;
+	height: 100%;
+	background-color: #f5f5f5;
+	border: 2px solid #ddd;
+	border-radius: 4px;
+}
+/*重写鼠标滑过的样式*/
+.nav-pills  li  a:hover {
+	background-color: #babdb6;
+	color: #000000;
+}
+/* UIRouter app.css*/
+body, #mainWrapper {
+	height: 70%;
+	background-color: rgb(245, 245, 245);
+}
+
+body, .form-control {
+	font-size: 12px !important;
+}
+
+.floatRight {
+	float: right;
+	margin-right: 18px;
+}
+
+.has-error {
+	color: red;
+}
+
+.formcontainer {
+	background-color: #DAE8E8;
+	padding: 20px;
+}
+
+.tablecontainer {
+	padding-left: 20px;
+}
+
+.generic-container {
+	width: 80%;
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-top: 60px;
+	margin-bottom: 20px;
+	padding: 20px;
+	background-color: #EAE7E7;
+	border: 1px solid #ddd;
+	border-radius: 10px;
+	box-shadow: 0 0 30px black;
+}
+
+.custom-width {
+	width: 80px !important;
+}
